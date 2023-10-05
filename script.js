@@ -207,8 +207,37 @@ function playAnimation() {
   playAnimation()
   
 
+// Fungsi untuk menampilkan modal
+function showModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = "block";
+}
 
+// Fungsi untuk menyembunyikan modal
+function hideModal(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.style.display = "none";
+}
 
+// Event listener untuk menampilkan modal Login saat tombol "Login/Register" diklik
+document.getElementById("login-register-button").addEventListener("click", function () {
+    showModal("login-modal");
+});
 
+// Event listener untuk menampilkan modal Register saat tombol "Register Now" di modal Login diklik
+document.getElementById("show-register").addEventListener("click", function () {
+    hideModal("login-modal");
+    showModal("register-modal");
+});
+
+// Event listener untuk menutup modal Login
+document.getElementById("login-close").addEventListener("click", function () {
+    hideModal("login-modal");
+});
+
+// Event listener untuk menutup modal Register
+document.getElementById("register-close").addEventListener("click", function () {
+    hideModal("register-modal");
+});
 
 

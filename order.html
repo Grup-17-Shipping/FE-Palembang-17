@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="order.css">
     <script src="script.js" defer></script>
-    <title>Triverse Shipping</title>
+    <title>Halaman Order</title>
 </head>
 <body>
     <header class="transparent-header">
@@ -34,9 +34,15 @@
                             <img width="14" height="14" src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png" alt="expand-arrow--v1"/>
                         </span>
                         <ul class="submenu">
-                            <li id="trace">Trace & Track</li>
-                            <li id="rates">Shipping Rates</li>
-                            <li id="find">Find Drop Point</li>
+                            <li id="trace">
+                                <a href="tracking.html">Trace & Track</a>
+                            </li>
+                            <li id="rates">
+                                <a href="shipping_rates.html">Shipping Rates</a>
+                            </li>
+                            <li id="find">
+                                <a href="find_drop_point.html">Find Drop Point</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="menu-item" id="services" >
@@ -56,8 +62,12 @@
                             <img width="14" height="14" src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png" alt="expand-arrow--v1"/>
                         </span>
                         <ul class="submenu">
-                            <li id="faq">FAQ</li>
-                            <li id="terms">Terms</li>
+                            <li id="faq">
+                                <a href="information_faq.html">FAQ</a>
+                            </li>
+                            <li id="terms">
+                                <a href="information_terms.html">Terms</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="menu-item" id="about">
@@ -85,7 +95,9 @@
                             <img width="14" height="14" src="https://img.icons8.com/ios/50/000000/expand-arrow--v1.png" alt="expand-arrow--v1"/>
                         </span>
                         <ul class="submenu">
-                            <li id="ind">Indonesia</li>
+                            <li id="ind">
+                                <a href="indonesia.html">Indonesia</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -93,8 +105,13 @@
         </div>
     </header>
     <main>
-        <div class="order-container">
-            <img src="image/order.jpeg" alt="Gambar Produk">
+        <div class="banner">
+            <div class="sbanner1">
+                <img src="image/order .png" alt="Banner 1" width="1220" height="260">
+            </div>
+        </div>
+
+        <section class="order-container">
             <div class="informasi-pengirim">
                 <h2>Informasi Pengirim</h2>
                 <hr class="feature-divider">
@@ -162,7 +179,7 @@
                     </div>
                 <!-- Tambahkan field lainnya di sini sesuai kebutuhan -->
             </div>
-        </div>
+        </section>
     </main>
     <script>
         function redirectToAnotherPage() {

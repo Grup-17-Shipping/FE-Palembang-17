@@ -52,7 +52,7 @@ header {
   nav ul ul li:hover {
     background-color: #43A2D9; /* Warna latar belakang saat mengarahkan kursor ke submenu */
   }
-
+  
 
 .menu-item a {
     text-decoration: none; /* Menghapus underlined link */
@@ -70,7 +70,7 @@ header {
 
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 10px 20px;
 }
@@ -117,8 +117,6 @@ nav ul {
     
 }
 
-/* ... kode CSS sebelumnya ... */
-
 /* Gaya Submenu */
 .submenu {
     position: absolute;
@@ -149,24 +147,26 @@ nav ul {
     background-color: #f3f3f3;
 }
 
+.parent:hover .submenu {
+    transform: scaleY(1); /* Saat hover pada parent, submenu diubah kembali ke skala normal */
+}
 
-
+.submenu-item:last-child {
+    margin-bottom: 0;
+}
 
 /* Gaya halaman order */
 
 .order-container {
-    max-width: 1400px; /* Lebar kontainer yang lebih besar */
-    margin: 100px auto; /* Atur margin sesuai kebutuhan */
-    padding: 20px;
     border-radius: 8px;
     display: flex; /* Menggunakan Flexbox untuk mengatur tata letak */
+    justify-content: center;
     flex-direction: column; /* Tampilkan elemen dalam satu kolom */
+    margin-bottom: 70px;
+    margin-left: 30px;
+    padding: 0 20px;
 }
 
-.order-container img {
-    width: 100%; /* Gambar menyesuaikan lebar kontainer */
-    height: auto;
-}
 
 .informasi-pengirim {
     margin-top: 20px;
@@ -175,7 +175,7 @@ nav ul {
 
 .informasi-pengirim h2 {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .input-group {
@@ -200,13 +200,13 @@ nav ul {
     flex-grow: 1; /* Memungkinkan input tumbuh sehingga menempati ruang yang tersedia */
     padding: 10px;
     font-size: 16px;
-    border: none;
-    background-color: #E1F3FF; /* Warna latar belakang kotak input menjadi tosca */
-    border-radius: 4px;
+    border: 1px solid #ccc; /* Mengubah border menjadi abu-abu muda */
+    background-color: #fff;
+    border-radius: 2px;
     color: #000000; /* Warna teks input tetap putih */
     outline: none; /* Menghilangkan garis focus */
-    border: none; /* Menghilangkan border */
     width: 300px;
+    margin-top: 10px;
 }
 
 #kode-pos-input-field {
@@ -223,25 +223,25 @@ nav ul {
 }
 
 #alamat-input-field input[type="text"] {
-    background-color: #E1F3FF; /* Warna latar belakang kotak input menjadi tosca */
+    background-color: #fff; /* Warna latar belakang kotak input menjadi tosca */
     color: #000000; /* Warna teks input menjadi putih */
     height: 100px;
 }
 
 #alamat2-input-field input[type="text"] {
-    background-color: #E1F3FF; /* Warna latar belakang kotak input menjadi tosca */
+    background-color: #fff; /* Warna latar belakang kotak input menjadi tosca */
     color: #000000; /* Warna teks input menjadi putih */
     height: 100px;
 }
 
 #alamat-detail-field input[type="text"] {
-    background-color: #E1F3FF; /* Warna latar belakang kotak input menjadi tosca */
+    background-color: #fff; /* Warna latar belakang kotak input menjadi tosca */
     color: #000000; /* Warna teks input menjadi putih */
     height: 100px;
 }
 
 #kode-pos-input-field input[type="text"] {
-    background-color: #E1F3FF; /* Warna latar belakang kotak input menjadi tosca */
+    background-color: #fff; /* Warna latar belakang kotak input menjadi tosca */
     color: #000000; /* Warna teks input menjadi putih */
 }
 

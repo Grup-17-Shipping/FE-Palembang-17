@@ -70,7 +70,7 @@ header {
 
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 10px 20px;
 }
@@ -116,9 +116,6 @@ nav ul {
     margin-left: 5px;
     
 }
-
-/* ... kode CSS sebelumnya ... */
-
 /* Gaya Submenu */
 .submenu {
     position: absolute;
@@ -345,6 +342,141 @@ button[type="submit"]:hover {
     background-color: #007BAC;
 }
 
+
+
+/* Modal untuk Login/Register */
+.modal.login-modal,
+.modal.register-modal {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content.login-content,
+.modal-content.register-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+}
+
+.modal.login-modal .close,
+.modal.register-modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.modal.login-modal .close:hover,
+.modal.register-modal .close:hover {
+    color: #ff0000;
+}
+
+.modal.login-modal h2,
+.modal.register-modal h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.modal.login-modal form,
+.modal.register-modal form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal.login-modal label,
+.modal.register-modal label,
+.modal.login-modal input,
+.modal.register-modal input,
+.modal.login-modal button,
+.modal.register-modal button {
+    font-size: 16px;
+}
+
+.modal.login-modal .form-group,
+.modal.register-modal .form-group {
+    margin-bottom: 20px;
+}
+
+.modal.login-modal input[type="text"],
+.modal.register-modal input[type="text"],
+.modal.login-modal input[type="password"],
+.modal.register-modal input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.modal.login-modal button[type="submit"],
+.modal.register-modal button[type="submit"] {
+    background-color: #44A4DC;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.modal.login-modal button[type="submit"]:hover,
+.modal.register-modal button[type="submit"]:hover {
+    background-color: #007BAC;
+}
+
+.modal.login-modal .remember-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.modal.login-modal .register-link,
+.modal.register-modal .back-link {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #007BAC;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Tombol Kembali dari modal Register ke modal Login */
+.modal.register-modal .back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.modal.register-modal .back-button:hover {
+    color: #ff0000;
+}
+
+
+
+
 .advantages {
     text-align: center;
     /* background-color: #DDF2FF; */
@@ -406,69 +538,6 @@ button[type="submit"]:hover {
     height: 90px; 
     margin-bottom: 5px;
 }
-
-/* CSS untuk tab */
-/* CSS Styling */
-.news-events {
-    text-align: center;
-    padding: 40px 0;
-}
-
-.news-events-tabs {
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-.news-tab, .events-tab {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 0 10px;
-    cursor: pointer;
-    border-bottom: 1.5px solid transparent;
-}
-.events-tab, .news-tab {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    cursor: pointer;
-}
-
-
-.news-tab.active, .events-tab.active {
-    border-bottom-color: #000; /* Warna garis bawah saat tab aktif */
-}
-
-.news-content, .events-content {
-    display: none;
-    display: flex;
-    justify-content: space-between;
-}
-
-/* Left Content */
-.content-left {
-    width: 40%;
-}
-
-/* Right Content */
-.content-right {
-    width: 58%;
-}
-
-/* Kotak/tab content */
-.news-tab-content, .events-tab-content {
-    border-right: 1px solid #ddd;
-    padding-right: 10px;
-}
-
-/* Aturan CSS untuk tab non-aktif */
-.news-tab:not(.active), .events-tab:not(.active) {
-    border-bottom: 1px solid #ddd;
-}
-
-.news-tab:last-child, .events-tab:last-child {
-    border-bottom: none;
-}
-
-
 
 /* Tombol "Contact Us" */
 .contact-button {
@@ -671,7 +740,6 @@ footer {
     margin-right: 40px; /* Sesuaikan margin-right untuk menggeser lebih jauh ke kanan */
 }
 
-
 .footer-section h3 {
     font-size: 18px;
     margin-bottom: 10px;
@@ -788,7 +856,6 @@ footer {
     transition: background-color 0.3s;
     margin: 10px 10px; /* Tambahkan margin di atas dan bawah setiap card */
 }
-
 
 .card:hover {
     background-color: #43A3DA;
